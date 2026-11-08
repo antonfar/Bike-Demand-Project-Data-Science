@@ -1,0 +1,13 @@
+{
+  "rows": 731,
+  "columns": 16,
+  "missing_cells": 0,
+  "duplicate_dates": 0,
+  "start": "2011-01-01",
+  "end": "2012-12-31",
+  "sha256": "a6bcf826782d3c0fbfdcbeead17cd0884185a0dafe8ff10cd48a874ee7ba18be",
+  "source": "https://archive.ics.uci.edu/static/public/275/bike+sharing+dataset.zip",
+  "retrieved": "2026-11-06",
+  "daily_continuity": true,
+  "total_equals_casual_plus_registered": true
+}

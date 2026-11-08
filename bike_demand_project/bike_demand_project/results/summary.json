@@ -1,0 +1,8 @@
+{
+  "selected_model": "Ridge",
+  "test_days": 92,
+  "test_MAE": 938.9739900423843,
+  "baseline_MAE": 1457.5869565217392,
+  "MAE_improvement_pct": 35.58024199921002,
+  "development_days": 611
+}

@@ -1,0 +1,5 @@
+period,group,days,MAE
+Development validation,Other days,167,708.9350411915553
+Development validation,High prior volatility,13,1032.5727352586387
+Final test,Other days,65,872.0239522538106
+Final test,High prior volatility,27,1100.1500069408028

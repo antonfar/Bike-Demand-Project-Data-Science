@@ -1,0 +1,23 @@
+{
+  "winner_chosen_before_test": "Ridge",
+  "selected_parameters": [
+    {
+      "model": "Ridge",
+      "parameter": 10.0
+    },
+    {
+      "model": "Calendar-only Ridge",
+      "parameter": 10.0
+    },
+    {
+      "model": "Same weekday last week",
+      "parameter": 0.0
+    },
+    {
+      "model": "Gradient boosting",
+      "parameter": 100.0
+    }
+  ],
+  "test_start": "2012-10-01",
+  "seed": 42
+}

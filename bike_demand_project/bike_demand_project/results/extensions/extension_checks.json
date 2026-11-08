@@ -1,0 +1,13 @@
+{
+  "original_files_unchanged": {
+    "test_predictions.csv": "b29a76c020d2840285456f7f35f3b51b9e63270e64fa5b37a7eabdf72a9f581b",
+    "test_metrics.csv": "38b4fbc73e46ad42698fb9e190c3f8935650e54c0b3004da3342c15a0a2bc208",
+    "frozen_selection.json": "8acdc4305009181f44934f3975a300a6c4b35d82dc237dfaa7b1f18be8d5a91f",
+    "fitted_models.joblib": "6f42efd07b9072ab6aba204c861b2d3bc17044475a4191794bd68ccbe40770ab"
+  },
+  "original_Ridge_predictions_reproduced": true,
+  "bootstrap_pairs_preserved": true,
+  "random_seed_base": 20261106,
+  "volatility_threshold": 0.25350148507870984,
+  "status": "exploratory"
+}
