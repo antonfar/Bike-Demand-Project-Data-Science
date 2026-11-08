@@ -1,4 +1,4 @@
-"""Exploratory diagnostics. Never rewrites original model/prediction outputs."""
+"""Exploratory diagnostics that preserve the original models and predictions."""
 from pathlib import Path
 import hashlib
 import json

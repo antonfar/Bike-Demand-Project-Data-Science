@@ -1,8 +1,9 @@
 # Context for selected failures
 
 These cases were selected after inspecting the original test errors. They are
-exploratory explanations, not causal estimates. Weather/service context is not
-fed back into the forecasting models. All observations remain in headline scores.
+exploratory case studies that help interpret the errors. The forecasting models
+do not use this weather or service information, and every observation remains
+in the reported scores.
 
 ## October 29–30, 2012: Sandy and service availability
 
@@ -14,11 +15,11 @@ ARLnow's October 31 reporting says Capital Bikeshare suspended service for about
 includes comments from BikeArlington's Chris Eatough. A DC government notice
 also confirms government and school closures for October 30 because of Sandy.
 
-Interpretation: the service shutdown is directly relevant context for very low
-recorded rentals. Counts measure realized use under service availability, not
-unconstrained customer demand. These sources do not establish why the source
+The shutdown helps explain why recorded rentals could fall so sharply. Rental
+counts depend on whether the service is available, as well as on customer demand. These sources do not establish why the source
 dataset contains exactly 22 rentals or permit separating every cause of the drop.
-We have not reconstructed a complete time-stamped closure-information feed.
+The analysis does not include a complete history of service notices with their
+publication timestamps.
 
 Sources:
 - Katie Pyzyk, ARLnow, October 31, 2012:

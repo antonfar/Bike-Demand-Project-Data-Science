@@ -1,4 +1,4 @@
-"""Reproducible next-day rental forecasting. See EXPERIMENT_PLAN.md."""
+"""Daily rental forecasting with chronological validation."""
 from pathlib import Path
 import hashlib
 import io
@@ -55,7 +55,7 @@ def load_data():
 
 
 def make_features(raw):
-    """Every target-derived input is shifted into the past BEFORE rolling."""
+    """Build lagged features and rolling statistics from completed days."""
     d = raw[['dteday', 'cnt', 'holiday', 'workingday']].copy()
     d['weekday'] = d.dteday.dt.dayofweek  # Monday=0, unlike source's Sunday=0
     angle = 2 * np.pi * (d.dteday.dt.dayofyear - 1) / 365.25
@@ -81,7 +81,7 @@ def check_features(raw, data):
         assert row.lag_7 == raw.loc[i-7, 'cnt']
         assert np.isclose(row.mean_7, raw.loc[i-7:i-1, 'cnt'].mean())
         changed = raw.copy()
-        changed.loc[i:, 'cnt'] = 1000000  # today's and future outcomes must not affect today's inputs
+        changed.loc[i:, 'cnt'] = 1000000  # current and future outcomes cannot change current predictors
         other = make_features(changed).set_index('dteday').loc[day, FEATURES]
         np.testing.assert_allclose(row[FEATURES].to_numpy(dtype=float), other.to_numpy(dtype=float))
         prefix = make_features(raw.iloc[:i+1]).iloc[-1]
@@ -107,7 +107,7 @@ def scores(y, prediction):
 
 
 def develop(data):
-    """This function receives development rows ONLY, so it cannot access test targets."""
+    """Select models using development data and expanding validation folds."""
     assert data.dteday.max() < CUTOFF
     splits = list(TimeSeriesSplit(n_splits=3, test_size=60).split(data))
     records, fold_info = [], []

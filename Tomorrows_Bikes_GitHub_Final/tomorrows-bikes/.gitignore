@@ -1,0 +1,18 @@
+# Local Python environments and caches
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.pytest_cache/
+
+# Local credentials and editor state
+.env
+.env.*
+!.env.example
+.DS_Store
+.vscode/
+.idea/
+
+# Recreate this model artifact with run_project.py
+results/fitted_models.joblib
